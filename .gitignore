@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+0x01-unity_concepts/ProjectSettings/
+0x01-unity_concepts/Library/
+0x01-unity_concepts/Logs/
+0x01-unity_concepts/Packages/
+0x01-unity_concepts/Temp/
+0x01-unity_concepts/Assets/*.meta
