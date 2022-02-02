@@ -2,59 +2,59 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public Rigidbody rb;
-    public float speed = 0f;
+    public float playerSpeed = 7.5f;
     public float restartHeight = 0f;
     public Vector3 jump;
-    public float jumpForce = 0.0f;
-    private bool isGrounded;
-    private Vector3 startPosition;
+    private float jumpHeight = 1.0f;
 
+    private CharacterController controller;
+    private Vector3 moveDirection;
+    private Vector3 cameraForward = new Vector3(0,0,0);
+    private Vector3 cameraRight = new Vector3(0, 0, 0);
+    private Vector3 playerGravity;
+    private float gravityValue = -12.81f;
+    private bool failPlayer = false;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        startPosition = new Vector3(0.0f, restartHeight, 0.0f);
+        controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        // movement
+        cameraForward = Camera.main.transform.forward;
+        cameraRight = Camera.main.transform.right;
+        cameraForward.y = 0;
+        cameraRight.y = 0;
+
+        moveDirection = Vector3.Normalize((Input.GetAxis("Vertical") * cameraForward) +
+                                          (Input.GetAxis("Horizontal") * cameraRight));
+
+        // jump
+        if(!controller.isGrounded)
         {
-            rb.AddForce(speed * Time.deltaTime, 0, 0);
+            playerGravity.y += gravityValue * Time.deltaTime;
+        }
+        else if(Input.GetButtonDown("Jump"))
+	    {
+            playerGravity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+		}
+        
+        if(!failPlayer)
+        {
+            controller.Move(moveDirection * Time.deltaTime * playerSpeed);
         }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.AddForce(-speed * Time.deltaTime, 0, 0);
-        }
+		controller.Move(playerGravity * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.S))
+        if (transform.position.y < -20)
         {
-            rb.AddForce(0, 0, -speed * Time.deltaTime);
+            failPlayer  = true;
+            transform.position = new Vector3(0.0f, restartHeight, 0.0f);
+            playerGravity.y = gravityValue;
+        } else if(transform.position.y < 2) {
+            failPlayer  = false;
         }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.AddForce(0, 0, speed * Time.deltaTime);
-        }
-
-        // jump one time, while isGrounded is true and press Space bar 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }
-        if (rb.position.y < -10)
-        {
-            rb.velocity = Vector3.zero;
-            rb.position = startPosition;
-        }
-    }
-
-    void OnCollisionStay()
-    {
-        isGrounded = true;
     }
 
 }
