@@ -2238,6 +2238,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2554255020461538794, guid: e18be5fb4d9908c45ac9137ce9bac25b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 88077cb4d2b59cb488d571bb94ca9742, type: 3}
+    - target: {fileID: 3189469451305037442, guid: e18be5fb4d9908c45ac9137ce9bac25b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: fc8b4e5f0e60dbf41b787a631c950a02, type: 3}
     - target: {fileID: 3988634828604398064, guid: e18be5fb4d9908c45ac9137ce9bac25b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2250,6 +2258,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4686087586999674090, guid: e18be5fb4d9908c45ac9137ce9bac25b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: fc8b4e5f0e60dbf41b787a631c950a02, type: 3}
+    - target: {fileID: 5469544162793795450, guid: e18be5fb4d9908c45ac9137ce9bac25b, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: fc8b4e5f0e60dbf41b787a631c950a02, type: 3}
     - target: {fileID: 8311219544478778500, guid: e18be5fb4d9908c45ac9137ce9bac25b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
