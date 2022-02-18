@@ -18,7 +18,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetString("SavedScene"));
+        /* SceneManager.LoadScene(PlayerPrefs.GetString("SavedScene")); */
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Apply()

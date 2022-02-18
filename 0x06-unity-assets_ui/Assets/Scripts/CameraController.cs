@@ -34,7 +34,12 @@ public class CameraController : MonoBehaviour
         if (isPanning)
         {
             Vector2 input = MouseInput();
-            transform.Rotate(Vector3.up * input.x * panSpeed * Time.deltaTime);
+            Debug.Log(Time.deltaTime);
+            transform.Rotate(input.y * panSpeed * Time.deltaTime, input.x * panSpeed * Time.deltaTime, 0);
+            /* if (input.y > 0)
+            {
+                transform.Rotate(Vector3.up * input.y * panSpeed * Time.deltaTime);
+            } */
         }
 
     }

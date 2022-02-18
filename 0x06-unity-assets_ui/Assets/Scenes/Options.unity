@@ -520,6 +520,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8317909573128258544, guid: 04f1dfe997a01bc4f82b759b6484defa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 879530675}
+    - target: {fileID: 8317909573128258544, guid: 04f1dfe997a01bc4f82b759b6484defa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317909573128258544, guid: 04f1dfe997a01bc4f82b759b6484defa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f1dfe997a01bc4f82b759b6484defa, type: 3}
 --- !u!224 &517551365 stripped
@@ -997,7 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6946380c841f9419e4bde933f5ee75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invertYAxis: {fileID: 0}
+  invertYAxis: {fileID: 1663484832}
 --- !u!1 &959649118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2279,18 @@ PrefabInstance:
     - target: {fileID: 6792341280792456378, guid: ab9c2c42d21ef9646a4ea388a56f8fdd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670610137377288488, guid: ab9c2c42d21ef9646a4ea388a56f8fdd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 879530675}
+    - target: {fileID: 8670610137377288488, guid: ab9c2c42d21ef9646a4ea388a56f8fdd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 8670610137377288488, guid: ab9c2c42d21ef9646a4ea388a56f8fdd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionsMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9c2c42d21ef9646a4ea388a56f8fdd, type: 3}
